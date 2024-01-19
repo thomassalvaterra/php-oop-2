@@ -1,17 +1,18 @@
 <?php
+require_once __DIR__ . '/categories.php';
 
-class Product
+class Prodotti
 {
-    public $name;
-    public $weight;
-    public $typology;
-    public $expiration;
+    public $img;
+    public $nome;
+    public $prezzo;
+    public $categoria;
 
-    public function __construct($name, $weight, $typology, $expiration)
+    public function __construct($img, $nome, $prezzo, Categorie $categoria)
     {
-        $this->name = $name;
-        $this->weight = $weight;
-        $this->typology = $typology;
-        $this->expiration = $expiration;
+        $this->img = $img;
+        $this->nome = $nome;
+        $this->prezzo = $prezzo;
+        $this->categoria = $categoria;
     }
 }

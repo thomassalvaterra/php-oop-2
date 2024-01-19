@@ -1,35 +1,46 @@
 <?php
-
 require_once __DIR__ . '/Models/categories.php';
 require_once __DIR__ . '/Models/prodotti.php';
+require_once __DIR__ . '/Models/giochi.php';
+require_once __DIR__ . '/Models/cibo.php';
+require_once __DIR__ . '/Models/attrezzi.php';
+
+$cane = new Categorie(
+    "Ottimo Per Cani"
+);
+$gatto = new Categorie(
+    "Ottimo Per Gatti"
+);
+$roditore = new Categorie(
+    "Ottimo Per Ratti"
+);
 
 $prodotti = [
-    new Category(
-        "https://www.purina.it/sites/default/files/styles/ttt_image_510/public/2021-02/BREED%20Hero%20Mobile_0026_siberian_husky.jpg?itok=glDRcRov",
-        "Bobby",
-        "15kg",
-        "Husky",
-        new Product("BigDog", "250gr", "senior dog", "03/04/2024")
+    new Prodotti(
+        "https://imgs.search.brave.com/hMTf-3G2CNY1HgLVe5nOzJie5Cy1wCQ-EdIEKlMSoRU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFrSm9xZ0RDQVMu/anBn",
+        "Crocchette",
+        "15€",
+        $cane
     ),
-    new Category(
-        "https://www.purina.it/sites/default/files/styles/ttt_image_510/public/2021-02/BREED%20Hero%20Mobile_0103_great_dane.jpg?itok=pBPijdeO",
-        "Alex",
-        "20kg",
-        "Alano",
-        new Product("DogSafe", "100gr", "junior dog", "20/07/2024")
+    new Giochi(
+        "https://imgs.search.brave.com/sOEo-Trzn4hikkB2umkYdcpCgKT68xH-_nuvoDHbB-Q/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFPVlA3cTBKREwu/anBn",
+        "Pallina",
+        "4€",
+        $gatto,
+        "40%"
     ),
-    new Category(
-        "https://www.purina.it/sites/default/files/2021-02/CAT%20HERO_0021_Scottish_fold.jpg",
-        "Sissi",
-        "3kg",
-        "Scottish Fold",
-        new Product("Felix", "100gr", "junior cat", "24/08/2024")
+    new Cibo(
+        "https://imgs.search.brave.com/Ma7fjHHV3cJjIG8ojR9N2PTuMgAUJBv4nrXrLBrC3QY/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFqYm1RUXpXeEwu/anBn",
+        "Bastoncini Di Coniglio",
+        "17€",
+        $roditore,
+        "10/01/10"
     ),
-    new Category(
-        "https://i0.wp.com/www.cremazioneanimali.cloud/wp-content/uploads/2019/11/persiano-blu-1280x720.jpg?resize=640%2C360&ssl=1",
-        "Dixi",
-        "4.5kg",
-        "Persiano",
-        new Product("Whisky", "250gr", "senior cat", "14/09/2024")
-    )
+    new Attrezzi(
+        "https://imgs.search.brave.com/smNpbGCgu2fDw0HzV0pslrW6faRqUPR_uVrST8QXO2w/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFiSG9HSjFiU0wu/anBn",
+        "Guinzaglio",
+        "20€",
+        $gatto,
+        "20%"
+    ),
 ];
